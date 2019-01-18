@@ -1,0 +1,200 @@
+# header information:
+Htutorial_3|9.07
+
+# Views:
+Vicon|ic
+Vlayout|lay
+Vschematic|sch
+
+# Technologies:
+Tmocmos|ScaleFORmocmos()D25.0|mocmosAnalog()BT|mocmosNumberOfMetalLayers()I3
+
+# Cell INV_20_10;2{ic}
+CINV_20_10;2{ic}||artwork|1520854644290|1520861184015|E
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NTriangle|art@66||0|1|6|6|RRR|
+NCircle|art@67||4|1|2|2||
+Nschematic:Bus_Pin|pin@0||-7|1||||
+Nschematic:Wire_Pin|pin@1||-3|1||||
+Nschematic:Bus_Pin|pin@2||8|1|||RR|
+Nschematic:Wire_Pin|pin@3||5|1|||RR|
+Aschematic:wire|net@0|||0|pin@1||-3|1|pin@0||-7|1
+Aschematic:wire|net@1|||1800|pin@3||5|1|pin@2||8|1
+EIN||D5G2;|pin@0||U
+EOUT||D5G2;|pin@2||U
+X
+
+# Cell INV_20_10;1{ic}
+CINV_20_10;1{ic}||artwork|1520854595881|1520854595881|E
+Ngeneric:Facet-Center|art@0||0|0||||AV
+X
+
+# Cell INV_20_10;1{sch}
+CINV_20_10;1{sch}||schematic|1520853890601|1520854652197|
+IINV_20_10;2{ic}|INV_20_1@0||12|33|||D5G4;
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NOff-Page|conn@0||-9|24||||
+NOff-Page|conn@1||6|24||||
+NGround|gnd@0||-1|15.5||-1||
+NTransistor|nmos@0||-3|21|||R||ATTR_length(D5G0.5;X0.5;Y-2;)D2.0|ATTR_width(D5G1;X1.5;Y-2;)D10.0|SIM_spice_model(D5G1;Y-3;)SNMOS
+NWire_Pin|pin@0||-1|31.5||||
+NWire_Pin|pin@1||-4|24||||
+NWire_Pin|pin@2||-1|24||||
+NTransistor|pmos@0||-3|27|||YR|2|ATTR_length(D5G0.5;X0.5;Y-1;)D2.0|ATTR_width(D5G1;X1.5;Y-2;)D20.0|SIM_spice_model(D5G1;Y-3;)SPMOS
+NPower|pwr@0||-1.5|31.5|-1|-1||
+Awire|net@0|||2700|pmos@0|s|-1|29|pin@0||-1|31.5
+Awire|net@1|||1800|pwr@0||-1.5|31.5|pin@0||-1|31.5
+Awire|net@3|||900|nmos@0|s|-1|19|gnd@0||-1|17
+Awire|net@5|||900|pmos@0|g|-4|27|pin@1||-4|24
+Awire|net@6|||900|pin@1||-4|24|nmos@0|g|-4|21
+Awire|net@7|||1800|conn@0|y|-7|24|pin@1||-4|24
+Awire|net@8|||900|pmos@0|d|-1|25|pin@2||-1|24
+Awire|net@9|||900|pin@2||-1|24|nmos@0|d|-1|23
+Awire|net@10|||0|conn@1|a|4|24|pin@2||-1|24
+EIN||D5G2;|conn@0|a|U
+EOUT||D5G2;|conn@1|y|U
+X
+
+# Cell NMOS_IV;1{lay}
+CNMOS_IV;1{lay}||mocmos|1520456072354|1520851059738||DRC_last_good_drc_area_date()G1520846242405|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1520846242405
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NMetal-1-N-Active-Con|contact@0||-92|12|5|||
+NMetal-1-N-Active-Con|contact@1||-92|2|5|||
+NMetal-1-Polysilicon-1-Con|contact@2||-106|7||||
+NN-Transistor|nmos@1||-92|7|7||||SIM_spice_model(D5G1;)SNMOS
+NN-Active-Pin|pin@0||-92|3.25||||
+NPolysilicon-1-Pin|pin@1||-99|7||||
+NMetal-1-Pin|pin@3||-92|-29||||
+NMetal-1-Pin|pin@4||-66|2||||
+NMetal-1-Pin|pin@5||-65|12||||
+NMetal-1-Pin|pin@6||-119|7||||
+Ngeneric:Invisible-Pin|pin@7||-119|-31|||||SIM_spice_card(D5G2;)S[vs S 0 DC 0,vw W 0 DC 0,vg G 0 DC 0  ,vd D 0 DC 0,.dc vd 0 5 1m vg 0 5 1,".include C:\\Users\\ACER\\Desktop\\IEEE\\Electric VLSI\\Electric_CMOSedu\\bare_pads_TinyChip_C5\\C5_models.txt"]
+NMetal-1-P-Well-Con|substr@0||-92|-12|5|||
+AN-Active|net@0|||S2700|nmos@1|diff-top|-91|10.75|contact@0||-91|12
+AN-Active|net@2||7|IJS2700|contact@1||-92|2|pin@0||-92|3.25
+AN-Active|net@3|||S0|nmos@1|diff-bottom|-92|3.25|pin@0||-92|3.25
+APolysilicon-1|net@5|||S900|nmos@1|poly-left|-99|7|pin@1||-99|7
+APolysilicon-1|net@6|||S1800|contact@2||-106|7|nmos@1|poly-left|-99|7
+AMetal-1|net@9||6|S900|substr@0||-92|-12|pin@3||-92|-29
+AMetal-1|net@10||1|S1800|contact@1||-92|2|pin@4||-66|2
+AMetal-1|net@11||1|S1800|contact@0||-92|12|pin@5||-65|12
+AMetal-1|net@12||1|S0|contact@2||-106|7|pin@6||-119|7
+ED||D5G2;|pin@5||U
+EG||D5G2;|pin@6||U
+EGND||D5G2;|pin@3||U
+ES||D5G2;|pin@4||U
+X
+
+# Cell NMOS_IV;1{sch}
+CNMOS_IV;1{sch}||schematic|1520456115934|1520853914919|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NGround|gnd@0||-47.5|3|-1|-2||
+N4-Port-Transistor|nmos-4@0||-55|6|||R||ATTR_length(D5G0.5;X0.5;Y-2;)D2.0|ATTR_width(D5G1;X1.5;Y-2;)D10.0|SIM_spice_model(D5G1;Y-3;)SNMOS
+Ngeneric:Invisible-Pin|pin@1||-60|0|||||SIM_spice_card(D5G1;)S[vs S 0 DC 0,vw W 0 DC 0,vg G 0 DC 0  ,vd D 0 DC 0,.dc vd 0 5 1m vg 0 5 1,".include C:\\Users\\ACER\\Desktop\\IEEE\\Electric VLSI\\Electric_CMOSedu\\bare_pads_TinyChip_C5\\C5_models.txt"]
+NWire_Pin|pin@3||-53|7||||
+NWire_Pin|pin@4||-48|5||||
+NWire_Pin|pin@5||-48|4||||
+NWire_Pin|pin@6||-59|6||||
+NWire_Pin|pin@9||-53|10||||
+NWire_Pin|pin@10||-48|10||||
+NWire_Pin|pin@11||-53|3||||
+Awire|net@2|||900|nmos-4@0|d|-53|8|pin@3||-53|7
+Awire|net@4|||1800|nmos-4@0|b|-53|5|pin@4||-48|5
+Awire|net@5|||900|pin@4||-48|5|pin@5||-48|4
+Awire|net@6|||0|gnd@0||-47.5|4|pin@5||-48|4
+Awire|net@7|||0|nmos-4@0|g|-56|6|pin@6||-59|6
+Awire|net@10|||2700|pin@3||-53|7|pin@9||-53|10
+Awire|net@11|||1800|pin@9||-53|10|pin@10||-48|10
+Awire|net@12|||900|nmos-4@0|s|-53|4|pin@11||-53|3
+ED||D5G2;|pin@10||U
+EG||D5G2;|pin@6||U
+ES||D5G2;|pin@11||U
+X
+
+# Cell PMOS_IV;1{lay}
+CPMOS_IV;1{lay}||mocmos|1520846277091|1520849802388||DRC_last_good_drc_area_date()G1520849807521|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1520849807521
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NMetal-1-P-Active-Con|contact@0||-45|11|5|||
+NMetal-1-P-Active-Con|contact@1||-45|1|5|||
+NMetal-1-Polysilicon-1-Con|contact@2||-59|6||||
+NMetal-1-Pin|pin@2||-45|35||||
+NMetal-1-Pin|pin@3||-78|6||||
+NMetal-1-Pin|pin@4||-17|11||||
+NMetal-1-Pin|pin@5||-17|1||||
+Ngeneric:Invisible-Pin|pin@6||-67|45|||||SIM_spice_card(D5G2;)S[vs S 0 DC 0,vw W 0 DC 0,vg G 0 DC 0  ,vd D 0 DC 0,.dc vd 0 -5 -1m vg 0 -5 -1,".include C:\\Users\\ACER\\Desktop\\IEEE\\Electric VLSI\\Electric_CMOSedu\\bare_pads_TinyChip_C5\\C5_models.txt"]
+NP-Transistor|pmos@0||-45|6|7||||SIM_spice_model(D5G1;)SPMOS
+NMetal-1-N-Well-Con|well@0||-45|24|5|1||
+AP-Active|net@6|||S900|contact@0||-45|11|pmos@0|diff-top|-45|9.75
+AP-Active|net@7|||S2700|contact@1||-45|1|pmos@0|diff-bottom|-45|2.25
+APolysilicon-1|net@8|||S1800|contact@2||-59|6|pmos@0|poly-left|-52|6
+AMetal-1|net@9||6|S2700|well@0||-45|24|pin@2||-45|35
+AMetal-1|net@10||1|S0|contact@2||-59|6|pin@3||-78|6
+AMetal-1|net@11||1|S1800|contact@0||-45|11|pin@4||-17|11
+AMetal-1|net@12||1|S1800|contact@1||-45|1|pin@5||-17|1
+ED||D5G2;|pin@5||U
+EG||D5G2;|pin@3||U
+ES||D5G2;|pin@4||U
+EW||D5G2;|pin@2||U
+X
+
+# Cell PMOS_IV;1{sch}
+CPMOS_IV;1{sch}||schematic|1520458251818|1520852605760|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+Ngeneric:Invisible-Pin|pin@0||-5|-3|||||SIM_spice_card(D5G1;)S[vs S 0 DC 0,vw W 0 DC 0,vg G 0 DC 0  ,vd D 0 DC 0,.dc vd 0 -5 -1m vg 0 -5 -1,".include C:\\Users\\ACER\\Desktop\\IEEE\\Electric VLSI\\Electric_CMOSedu\\bare_pads_TinyChip_C5\\C5_models.txt"]
+NWire_Pin|pin@1||8|6||||
+NWire_Pin|pin@3||-2|5||||
+NWire_Pin|pin@4||4|9||||
+NWire_Pin|pin@5||8|9||||
+NWire_Pin|pin@6||4|1||||
+N4-Port-Transistor|pmos-4@0||2|5|||YR|2|ATTR_length(D5G0.5;X0.5;Y-1;)D2.0|ATTR_width(D5G1;X1.5;Y-2;)D10.0|SIM_spice_model(D5G1;Y-3;)SPMOS
+Awire|net@0|||1800|pmos-4@0|b|4|6|pin@1||8|6
+Awire|net@2|||0|pmos-4@0|g|1|5|pin@3||-2|5
+Awire|net@3|||2700|pmos-4@0|s|4|7|pin@4||4|9
+Awire|net@4|||1800|pin@4||4|9|pin@5||8|9
+Awire|net@5|||900|pmos-4@0|d|4|3|pin@6||4|1
+ED||D5G2;|pin@6||U
+EG||D5G2;|pin@3||U
+ES||D5G2;|pin@5||U
+EW||D5G2;|pin@1||U
+X
+
+# Cell R_divider;1{lay}
+CR_divider;1{lay}||mocmos|1520416274008|1520433243873||DRC_last_good_drc_area_date()G1520433258948|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1520433258948
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NMetal-1-Pin|pin@0||-98|30||||
+NMetal-1-Pin|pin@1||-98|-46||||
+Ngeneric:Invisible-Pin|pin@3||-10|-46|||||SIM_spice_card(D5G10;)S[vin VIN 0 DC 1,.tran 0 1]
+NN-Well-Resistor|resnwell@0||0|0|146.5|3|||SCHEM_resistance(D5G10;)S10k
+NN-Well-Resistor|resnwell@1||0|-25|146.5|3|||SCHEM_resistance(D5G10;)S10k
+AMetal-1|gnd|D5G10;||S900|resnwell@1|left|-98|-25|pin@1||-98|-46
+AMetal-1|vin|D5G10;||S2700|resnwell@0|left|-98|0|pin@0||-98|30
+AMetal-1|vout|D5G10;||S900|resnwell@0|right|98|0|resnwell@1|right|98|-25
+X
+
+# Cell R_divider;1{sch}
+CR_divider;1{sch}||schematic|1520415813217|1520426793664|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NWire_Pin|pin@0||6|5||||
+NWire_Pin|pin@1||-2|5||||
+NWire_Pin|pin@2||6|-1||||
+Ngeneric:Invisible-Pin|pin@4||-1|0|||||SIM_spice_card(D5G1;)S[vin VIN 0 DC 1,.tran 0 1]
+NResistor|resnwell@0||2|5||||3|ATTR_length(D5G0.25;X-1.5;)D187.5|ATTR_width(D5G0.5;X1.5;)D15.0|SCHEM_resistance(D5G1;)S10k
+NResistor|resnwell@1||6|2|||RRR|3|ATTR_length(D5G0.25;X-1.5;)D187.5|ATTR_width(D5G0.5;X1.5;)D15.0|SCHEM_resistance(D5G1;)S10k
+Awire|GND|D5G1;||900|resnwell@1|b|6|0|pin@2||6|-1
+Awire|VIN|D5G1;Y1;||0|resnwell@0|a|0|5|pin@1||-2|5
+Awire|VOUT|D5G1;Y1;||1800|resnwell@0|b|4|5|pin@0||6|5
+Awire|net@1|||2700|resnwell@1|a|6|4|pin@0||6|5
+X
+
+# Cell inverter_sim;1{sch}
+Cinverter_sim;1{sch}||schematic|1520861296702|1520863289315|
+IINV_20_10;1{ic}|INV_20_1@0||-31|1|||D5G4;
+IINV_20_10;1{ic}|INV_20_1@1||-24|1|||D5G4;
+IINV_20_10;2{ic}|INV_20_1@3||-30|-5|||D5G4;
+Ngeneric:Facet-Center|art@0||0|0||||AV
+Ngeneric:Invisible-Pin|pin@2||-23|-10|||||SIM_spice_card(D5G1;)S[vdd vdd 0 DC 5,vin in 0 DC 0,.dc vin 0 5 1m,".include C:\\Users\\ACER\\Desktop\\IEEE\\Electric VLSI\\Electric_CMOSedu\\bare_pads_TinyChip_C5\\C5_models.txt"]
+NWire_Pin|pin@4||-13|-4||||
+NWire_Pin|pin@6||-41|-4||||
+Awire|in|D5G1;||0|INV_20_1@3|IN|-37|-4|pin@6||-41|-4
+Awire|out|D5G1;||1800|INV_20_1@3|OUT|-22|-4|pin@4||-13|-4
+X
