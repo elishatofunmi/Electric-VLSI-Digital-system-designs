@@ -12672,7 +12672,7 @@ Ngeneric:Facet-Center|art@0||0|0||||AV
 X
 
 # Cell moore_fsm_model;1{lay}
-Cmoore_fsm_model;1{lay}||mocmos|1549089762056|1549093544883|
+Cmoore_fsm_model;1{lay}||mocmos|1549089762056|1549093969123|
 IAND_GATE;1{lay}|AND_GATE@0||-77|104.5|||D5G4;
 IAND_GATE;1{lay}|AND_GATE@1||-79.5|3.5|||D5G4;
 IAND_GATE;1{lay}|AND_GATE@2||-81|-84.5|||D5G4;
@@ -12699,6 +12699,8 @@ NMetal-1-Polysilicon-1-Con|contact@16||-122|53.5||||
 NMetal-1-Metal-2-Con|contact@17||-189.5|-10||||
 NMetal-1-Polysilicon-1-Con|contact@18||-189.5|-10||||
 NMetal-1-Metal-2-Con|contact@19||127|-89||||
+NMetal-1-Metal-2-Con|contact@20||64|-9.5||||
+NMetal-1-Polysilicon-1-Con|contact@21||64|-9.5||||
 NMetal-1-Pin|pin@1||-58.5|-52||||
 NMetal-1-Pin|pin@2||-9.5|72.5||||
 NMetal-1-Pin|pin@3||-8.5|137||||
@@ -12777,6 +12779,7 @@ NMetal-2-Pin|pin@80||127|-32.5||||
 NMetal-2-Pin|pin@81||127|-88||||
 NMetal-1-Pin|pin@82||149|21.5||||
 Ngeneric:Invisible-Pin|pin@83||-38.5|182|||||ART_message(C10;D5FAgency FB Bold;G20;)SA SIMPLE MOORE FSM MODEL
+NMetal-1-Pin|pin@84||53.5|72.5||||
 AMetal-1|net@2||1|S1800|AND_GATE@2|vdd|-170|-52|pin@1||-58.5|-52
 AMetal-1|net@3||1|S900|OR_GATE@0|vdd_1|-58.5|-52|pin@1||-58.5|-52
 AMetal-1|net@4||1|S2700|clocked_@1|gnd|-9.5|72.5|pin@2||-9.5|72.5
@@ -12793,7 +12796,6 @@ AMetal-1|net@17||1|S1800|OR_GATE@0|vdd_1|-58.5|-52|pin@9||-6.5|-52
 AMetal-1|net@18||1|S1800|pin@9||-6.5|-52|pin@4||63.5|-52
 AMetal-1|net@19||1|S2700|pin@9||-6.5|-52|pin@10||-6.5|38
 AMetal-1|net@20||1|S1800|pin@10||-6.5|38|pin@11||53.5|38
-AMetal-1|net@21||1|S2700|pin@11||53.5|38|pin@12||53.5|76
 AMetal-1|net@22||1|S2700|AND_GATE@3|vdd|85.5|58|pin@13||85.5|76
 AMetal-1|net@23||1|S2700|pin@13||85.5|76|pin@6||85.5|137
 AMetal-1|net@24||1|S1800|pin@12||53.5|76|pin@13||85.5|76
@@ -12834,7 +12836,6 @@ APolysilicon-1|net@64|||S2700|pin@38||62.5|51|pin@39||62.5|101.5
 APolysilicon-1|net@65|||S900|pin@39||62.5|101.5|contact@6||62.5|100.5
 AMetal-1|net@66|||S1800|clocked_@1|Q_BAR|31.5|100.5|contact@6||62.5|100.5
 APolysilicon-1|net@67|||S0|AND_GATE@3|B|74|-1|pin@40||64|-1
-APolysilicon-1|net@68|||S900|pin@40||64|-1|pin@41||64|-16.5
 APolysilicon-1|net@69|||S1800|pin@41||64|-16.5|pin@42||118.5|-16.5
 APolysilicon-1|net@71|||S0|pin@43||118|-56|pin@44||110|-56
 APolysilicon-1|net@72|||S2700|clocked_@0|Q|110|-56.5|pin@44||110|-56
@@ -12895,6 +12896,13 @@ AMetal-2|net@131|||S900|pin@80||127|-32.5|pin@81||127|-88
 AMetal-2|net@132|||S900|pin@81||127|-88|contact@19||127|-89
 AMetal-1|net@133|||S1800|clocked_@0|Q_BAR|108.5|-89|contact@19||127|-89
 AMetal-1|net@134|||S1800|AND_GATE@3|AANDB|131|21.5|pin@82||149|21.5
+APolysilicon-1|net@135|||S900|pin@40||64|-1|contact@21||64|-9.5
+APolysilicon-1|net@136|||S900|contact@21||64|-9.5|pin@41||64|-16.5
+AMetal-1|net@137|||S|contact@20||64|-9.5|contact@21||64|-9.5
+AMetal-2|net@138|||S1800|pin@73||42.5|-9.5|contact@20||64|-9.5
+AMetal-1|net@139||1|S2700|pin@11||53.5|38|pin@84||53.5|72.5
+AMetal-1|net@140||1|S2700|pin@84||53.5|72.5|pin@12||53.5|76
+AMetal-1|net@141||1|S1800|clocked_@1|gnd|-9.5|72.5|pin@84||53.5|72.5
 ECLEAR||D5G15;|pin@37||U
 ECLK||D5G15;|pin@25||U
 EC_INPUT||D5G15;|pin@55||U
